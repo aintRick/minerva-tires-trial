@@ -1,0 +1,39 @@
+/* Customize Button Styles */
+.customize-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}
+
+.customize-button:hover {
+    background-color: #e03e00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.4);
+}
+
+.customize-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 69, 0, 0.3);
+}
+
+.customize-button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .customize-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

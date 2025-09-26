@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="Pics/327336510_1387372982079733_4073025529741406796_n-removebg-preview.png">
+    <title>Contact Us - YOKOHAMA Minerva Tires | Get In Touch</title>
+    <meta name="description" content="Contact Yokohama-Minerva for professional tire services. Visit our location in Laguna or reach out for appointments and inquiries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+    <!-- Header matching homepage exactly -->
+    <header id="header">
+        <div class="header-content">
+            <a href="homepage.html" class="logo" aria-label="Yokohama Minerva Home">YOKOHAMA - MINERVA</a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="about.html">RETURN</a></li>
+
+
+                </ul>
+                
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main contact section -->
+    <section class="contact">
+        <div class="contact-container">
+            <h1 class="section-title">Get In Touch</h1>
+            <p class="section-subtitle">Have questions or need to schedule a service? We're here to help!</p>
+
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card fade-in">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Our Location</h3>
+                        </div>
+                        <p>
+                            <strong>Yokohama-Minerva Tire Center</strong><br>
+                            Nat'l Highway, Real, Calamba<br>
+                            4027 Laguna, Philippines
+                        </p>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                        </div>
+                        <p>
+                            <a href="tel:+631234567890">+63 123 456 7890</a><br>
+                            <small>Mon-Sat: 8:00 AM - 6:00 PM</small>
+                        </p>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                        </div>
+                        <p>
+                            <a href="mailto:minervatires@gmail.com">minervatires@gmail.com</a><br>
+                            <small>We'll respond within 24 hours</small>
+                        </p>
+                    </div>
+
+                    <div class="business-hours fade-in">
+                        <h3 class="hours-title">
+                            <i class="fas fa-clock"></i>
+                            Business Hours
+                        </h3>
+                        <ul class="hours-list">
+                            <li>
+                                <span class="day">Monday - Friday</span>
+                                <span class="time open">8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span class="day">Saturday</span>
+                                <span class="time open">8:00 AM - 5:00 PM</span>
+                            </li>
+                            <li>
+                                <span class="day">Sunday</span>
+                                <span class="time closed">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container fade-in">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <div class="success-message" id="successMessage" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                    
+                    <form id="contactForm" action="contact.php" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name" autocomplete="name">
+                            <div class="error-message" id="nameError">Please enter your name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email">
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" autocomplete="tel">
+                            <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiry_type">Inquiry Type *</label>
+                            <select id="inquiry_type" name="inquiry_type" required>
+                                <option value="">-- Select Inquiry Type --</option>
+                                <option value="product">Product Information</option>
+                                <option value="service">Service Booking</option>
+                                <option value="warranty">Warranty Claim</option>
+                                <option value="dealer">Become a Dealer</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="inquiryError">Please select an inquiry type</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..." maxlength="1000"></textarea>
+                            <div class="error-message" id="messageError">Please enter your message</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit" id="submitBtn">
+                            Send Message <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer matching homepage -->
+    <footer>
+
+        <div class="copyright">
+            &copy; 2025 YOKOHAMA - Minerva Tires. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.10/sweetalert2.all.min.js"></script>
+    <script src="contact.js"></script>
+  
+</body>
+</html>

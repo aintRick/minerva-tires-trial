@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="Pics/327336510_1387372982079733_4073025529741406796_n-removebg-preview.png">
+    <title>About Us - YOKOHAMA - Minerva Tires | Premium Tire Services Since 1994</title>
+    <meta name="description" content="Learn about Yokohama-Minerva's 31+ years of excellence in tire services, alignment, and automotive maintenance in Laguna.">
+    <meta name="keywords" content="about Yokohama, tire services history, automotive maintenance, Laguna tire shop">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="about.js" defer></script>
+    <script src="auth-protection.js"></script>
+</head>
+<body>
+   
+    <!-- Header - Exactly aligned with homepage -->
+    <header id="header">
+        <div class="header-content">
+            <a href="homepage.html" class="logo" aria-label="Yokohama Minerva Home">YOKOHAMA - MINERVA</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="product.html">Services</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li class="auth-status" id="auth-status"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero-section" id="main-content" tabindex="-1">
+        <div class="hero-background">
+            <img src="Pics/About-us-Image-cda88a8d.jpeg" alt="Minerva Haus Building" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ABOUT US</h1>
+            <p class="hero-subtitle">Driving Excellence Since 1994</p>
+            <div class="hero-accent-line"></div>
+        </div>
+        <div class="scroll-indicator" aria-label="Scroll to content">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <main>
+        <!-- Company Profile Section -->
+        <section class="company-profile">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">COMPANY PROFILE</h2>
+                </div>
+
+                <div class="profile-grid">
+                    <!-- Company Story -->
+                    <div class="story-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Our Story</h3>
+                        <p>Yokohama Tire Sales Philippines has been at the forefront of tire innovation and excellence since 1994, providing premium quality tires and exceptional service to our valued customers across the Philippines.</p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div class="mission-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver world-class tire solutions that ensure safety, performance, and reliability for every journey, while building lasting relationships with our customers through exceptional service.</p>
+                    </div>
+
+                    <!-- Values Card -->
+                    <div class="values-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>Quality, Innovation, and Customer Satisfaction drive everything we do. We believe in delivering products that exceed expectations and service that creates lifelong customers.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="contact-info-section">
+                    <div class="info-grid">
+                        <div class="contact-card fade-in">
+                            <div class="contact-header">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Get In Touch</h3>
+                            </div>
+                            <div class="contact-details" id="contact-details">
+                                <!-- Loading placeholder -->
+                                <div class="loading-placeholder">
+                                    <p>Loading contact information...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hours-card fade-in">
+                            <div class="hours-header">
+                                <i class="fas fa-clock"></i>
+                                <h3>Business Hours</h3>
+                            </div>
+                            <div class="hours-grid" id="hours-grid">
+                                <!-- Loading placeholder -->
+                                <div class="loading-placeholder">
+                                    <p>Loading business hours...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Image Section -->
+                <div class="company-showcase fade-in">
+                    <div class="showcase-image">
+                        <img src="Pics/YOKOHAMA.jpg" alt="Yokohama Tires Display" class="profile-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Premium Quality Tires</h3>
+                                <p>Trusted by drivers nationwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section fade-in-up">
+            <div class="contact-cta-container">
+                <div class="contact-cta-content">
+                    <h2 class="contact-cta-title">Ready to Get Started?</h2>
+                    <p class="contact-cta-subtitle">
+                        Have questions about our services or need expert advice on tire selection? 
+                        Our experienced team is here to help you find the perfect solution for your vehicle.
+                    </p>
+                    
+                    <div class="contact-cta-buttons">
+                        <a href="contact.html" class="cta-btn cta-btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us Now
+                        </a>
+                    </div>
+
+                    <div class="contact-features fade-in-up">
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Expert Consultation</h4>
+                            <p>Get personalized recommendations from our tire specialists</p>
+                        </div>
+                        
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Quick Response</h4>
+                            <p>We respond to all inquiries within 24 hours</p>
+                        </div>
+                        
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Professional Service</h4>
+                            <p>Comprehensive tire services and maintenance solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Exactly aligned with homepage -->
+    <footer>
+        <div class="footer-section">
+            <h3>Contact Information</h3>
+            <ul id="footer-contact">
+                <li><i class="fas fa-envelope"></i> <span id="footer-email">Loading...</span></li>
+                <li><i class="fas fa-phone"></i> <span id="footer-phone">Loading...</span></li>
+                <li><i class="fas fa-map-marker-alt"></i> <span id="footer-address">Loading...</span></li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 YOKOHAMA - Minerva Tires. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Global variables to store data
+        let contactInfo = null;
+        let businessHours = null;
+
+        // Load data from PHP backend
+        async function loadData() {
+            try {
+                const response = await fetch('about.php');
+                const data = await response.json();
+                
+                if (data.success) {
+                    contactInfo = data.contact_info;
+                    businessHours = data.business_hours;
+                    
+                    // Populate contact information
+                    populateContactInfo();
+                    
+                    // Populate business hours
+                    populateBusinessHours();
+                    
+                    // Populate footer
+                    populateFooter();
+                } else {
+                    console.error('Failed to load data:', data.error);
+                    showFallbackData();
+                }
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showFallbackData();
+            }
+        }
+
+        function populateContactInfo() {
+            const contactDetails = document.getElementById('contact-details');
+            
+            let html = '';
+            if (contactInfo) {
+                html = `
+                    <p><strong>Email:</strong> ${contactInfo.email}</p>
+                    <div class="phone-numbers">
+                        <p><strong>Contact Numbers:</strong></p>
+                        <ul>
+                            <li><i class="fas fa-globe"></i> Globe: ${contactInfo.phone_globe}</li>
+                            <li><i class="fas fa-mobile-alt"></i> Smart: ${contactInfo.phone_smart}</li>
+                            <li><i class="fas fa-phone"></i> Landline: ${contactInfo.phone_landline}</li>
+                        </ul>
+                    </div>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span><strong>Address:</strong> ${contactInfo.address}</span>
+                    </div>
+                `;
+            }
+            
+            contactDetails.innerHTML = html;
+        }
+
+        function populateBusinessHours() {
+            const hoursGrid = document.getElementById('hours-grid');
+            
+            let html = '';
+            if (businessHours && businessHours.length > 0) {
+                businessHours.forEach(dayInfo => {
+                    // Remove hardcoded Sunday logic and use only database values
+                    const isClosed = dayInfo.is_closed == 1 || !dayInfo.open_time || !dayInfo.close_time;
+                    const closedClass = isClosed ? 'closed' : '';
+                    
+                    let timeDisplay = 'CLOSED';
+                    if (!isClosed) {
+                        const openTime = new Date('1970-01-01T' + dayInfo.open_time).toLocaleTimeString('en-US', {
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            hour12: true
+                        });
+                        const closeTime = new Date('1970-01-01T' + dayInfo.close_time).toLocaleTimeString('en-US', {
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            hour12: true
+                        });
+                        timeDisplay = `${openTime} - ${closeTime}`;
+                    }
+                    
+                    html += `
+                        <div class="day-time ${closedClass}">
+                            <span class="day">${dayInfo.day}</span>
+                            <span class="time">${timeDisplay}</span>
+                        </div>
+                    `;
+                });
+            }
+            
+            hoursGrid.innerHTML = html;
+        }
+
+        function populateFooter() {
+            if (contactInfo) {
+                document.getElementById('footer-email').textContent = contactInfo.email;
+                document.getElementById('footer-phone').textContent = contactInfo.phone_globe;
+                document.getElementById('footer-address').textContent = contactInfo.address;
+            }
+        }
+
+        function showFallbackData() {
+            // Fallback data in case PHP fails
+            const fallbackContact = {
+                email: 'minervatires@gmail.com',
+                phone_globe: '0905.489.9763',
+                phone_smart: '0968.622.2481',
+                phone_landline: '(049)545.1701 / (049)557.882',
+                address: 'National Highway Brgy Real, Calamba, Philippines'
+            };
+            
+            const fallbackHours = [
+                { day: 'Monday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Tuesday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Wednesday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Thursday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Friday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Saturday', open_time: '08:00:00', close_time: '18:00:00', is_closed: 0 },
+                { day: 'Sunday', open_time: null, close_time: null, is_closed: 1 }
+            ];
+            
+            contactInfo = fallbackContact;
+            businessHours = fallbackHours;
+            
+            populateContactInfo();
+            populateBusinessHours();
+            populateFooter();
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scroll for scroll indicator
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            document.querySelector('.company-profile').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animation on scroll - Updated to include new fade-in-up elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe both fade-in and fade-in-up elements
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

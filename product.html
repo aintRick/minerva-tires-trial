@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Automotive Services - YOKOHAMA Minerva Tires</title>
+    <meta name="description" content="Expert tire services including alignment, balancing, mounting, engine tune-ups, oil changes, and brake services at Yokohama-Minerva.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="icon" type="image/jpeg" href="Pics/327336510_1387372982079733_4073025529741406796_n-removebg-preview.png">
+    
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <!-- Sign-in Modal -->
+    <div id="signinModal" class="signin-modal" role="dialog" aria-labelledby="signin-title" aria-hidden="true">
+        <div class="signin-content">
+            <div class="signin-header">
+                <h2 id="signin-title" class="signin-title">Sign In Required</h2>
+                <p class="signin-subtitle">
+                    Please sign in with your Google account to book our premium automotive services.
+                </p>
+            </div>
+
+            <!-- Google Sign-In Button Container -->
+            <div id="g_id_onload"
+                 data-client_id="638830470563-2jp4bc36sj0celc220d6u5ssu3g605o6.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
+            </div>
+            
+            <div class="g_id_signin"
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="outline"
+                 data-text="continue_with"
+                 data-shape="pill"
+                 data-logo_alignment="left"
+                 data-width="300">
+            </div>
+
+            <button class="close-signin-btn" onclick="closeSigninModal()">
+                Maybe Later
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">YOKOHAMA - MINERVA</div>
+        <div class="header-nav">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="product.html" aria-current="page">Services</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="auth-section">
+            <div class="user-info" id="userInfo">
+                <img class="user-avatar" id="userAvatar" alt="User Avatar" onclick="signOut()">
+                <span class="user-name" id="userName"></span>
+                <button class="sign-out-btn" id="signOutBtn" title="Sign Out" onclick="signOut()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our Expert Services</h2>
+        <p class="section-subtitle">
+            From precision alignments to comprehensive tune-ups, we deliver exceptional automotive care 
+            that keeps you moving forward with confidence.
+        </p>
+
+        <div class="services-grid">
+            <!-- Wheel Alignment -->
+            <div class="service-card" data-service="alignment">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Wheel Alignment</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>30-45 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Precision computer-guided wheel alignment that maximizes tire life, improves fuel efficiency, 
+                    and ensures optimal vehicle handling for a safer, smoother drive.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱1,500</div>
+                </div>
+                <div class="service-features" id="alignment-features">
+                    <ul class="features-list">
+                        <li>State-of-the-art computer diagnostics</li>
+                        <li>Extends tire life by up to 40%</li>
+                        <li>Improves fuel efficiency by 10%</li>
+                        <li>Enhanced vehicle stability & control</li>
+                        <li>Complimentary alignment check</li>
+                        <li>12-month service warranty</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Wheel Alignment', 1500)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('alignment')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tire Balancing -->
+            <div class="service-card" data-service="balancing">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Tire Balancing</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>20-30 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Advanced dynamic balancing technology that eliminates vibrations, reduces tire wear, 
+                    and provides the smooth, comfortable ride you deserve.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱800</div>
+                </div>
+                <div class="service-features" id="balancing-features">
+                    <ul class="features-list">
+                        <li>High-precision dynamic balancing</li>
+                        <li>Eliminates steering wheel vibration</li>
+                        <li>Reduces irregular tire wear patterns</li>
+                        <li>Improves ride comfort significantly</li>
+                        <li>Protects suspension components</li>
+                        <li>Premium wheel weights included</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Tire Balancing', 800)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('balancing')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tire Mounting -->
+            <div class="service-card" data-service="mounting">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Tire Mounting</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>15-25 min/tire</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Professional tire installation using advanced equipment and techniques that ensure 
+                    perfect mounting while protecting your valuable rims.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱300<span style="font-size: 1rem; opacity: 0.7;">/tire</span></div>
+                </div>
+                <div class="service-features" id="mounting-features">
+                    <ul class="features-list">
+                        <li>Expert professional installation</li>
+                        <li>Rim protection guarantee</li>
+                        <li>Precise torque specifications</li>
+                        <li>New valve stem replacement</li>
+                        <li>Comprehensive post-installation check</li>
+                        <li>Eco-friendly tire disposal</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Tire Mounting', 300)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('mounting')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Engine Tune-Up -->
+            <div class="service-card" data-service="tuneup">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Engine Tune-Up</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>2-3 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Comprehensive engine optimization that restores power, improves fuel economy, 
+                    and ensures peak performance through thorough inspection and component replacement.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱3,500</div>
+                </div>
+                <div class="service-features" id="tuneup-features">
+                    <ul class="features-list">
+                        <li>Complete engine diagnostic scan</li>
+                        <li>Spark plug inspection & replacement</li>
+                        <li>Air filter cleaning/replacement</li>
+                        <li>Professional fuel system cleaning</li>
+                        <li>Performance optimization tuning</li>
+                        <li>90-day comprehensive warranty</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Engine Tune-Up', 3500)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('tuneup')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Oil Change Service -->
+            <div class="service-card" data-service="oil">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Oil Change Service</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>30-45 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Premium oil change service using high-quality lubricants that protect your engine, 
+                    extend its lifespan, and maintain optimal performance in all conditions.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱1,200</div>
+                </div>
+                <div class="service-features" id="oil-features">
+                    <ul class="features-list">
+                        <li>Premium synthetic oil options</li>
+                        <li>High-quality oil filter replacement</li>
+                        <li>Multi-point vehicle inspection</li>
+                        <li>Comprehensive fluid level checks</li>
+                        <li>Service reminder stickers</li>
+                        <li>Environmentally responsible disposal</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Oil Change Service', 1200)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('oil')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Underchasis Inspection -->
+            <div class="service-card" data-service="underchasis">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Underchasis Inspection</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>45-60 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Thorough undercarriage inspection that identifies potential issues early, 
+                    prevents costly repairs, and ensures your vehicle's structural integrity.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱2,000</div>
+                </div>
+                <div class="service-features" id="underchasis-features">
+                    <ul class="features-list">
+                        <li>Comprehensive undercarriage inspection</li>
+                        <li>Advanced corrosion prevention treatment</li>
+                        <li>Detailed suspension component check</li>
+                        <li>Complete exhaust system inspection</li>
+                        <li>Detailed digital condition report</li>
+                        <li>High-resolution photo documentation</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Underchasis Inspection', 2000)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('underchasis')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Brake Service -->
+            <div class="service-card" data-service="brakes">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-stop"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Brake Service</h3>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>1-2 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Professional brake service that ensures reliable stopping power and maximum safety 
+                    through expert inspection and premium component replacement.
+                </p>
+                <div class="service-price">
+                    <div class="price-label">Starting at</div>
+                    <div class="price-amount">₱2,500</div>
+                </div>
+                <div class="service-features" id="brakes-features">
+                    <ul class="features-list">
+                        <li>Complete brake system inspection</li>
+                        <li>Premium brake pad replacement</li>
+                        <li>Professional rotor resurfacing</li>
+                        <li>Brake fluid service included</li>
+                        <li>Safety performance guarantee</li>
+                        <li>6-month parts & labor warranty</li>
+                    </ul>
+                </div>
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="bookService('Brake Service', 2500)">
+                        <i class="fab fa-google" style="display: none;"></i>
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Service</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleFeatures('brakes')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Details</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Book Your Service</h2>
+                <button class="close-btn" onclick="closeModal()" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="success-alert" id="successAlert">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Booking Confirmed!</strong>
+                    <div style="font-size: 0.9rem; margin-top: 0.25rem;">
+                        We'll contact you shortly to confirm your appointment.
+                    </div>
+                </div>
+            </div>
+
+            <form class="booking-form" id="bookingForm" novalidate>
+                <div class="form-group">
+                    <label for="service">Selected Service</label>
+                    <input type="text" id="service" name="service" readonly style="background: #f0f0f0; font-weight: 600;">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name" autocomplete="name">
+                        <div class="error-message">Please enter your full name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+63 9XX XXX XXXX" autocomplete="tel">
+                        <div class="error-message">Please enter a valid phone number</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email"readonly>
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle">Vehicle Make & Model *</label>
+                        <input type="text" id="vehicle" name="vehicle" required placeholder="e.g., Toyota Camry 2020">
+                        <div class="error-message">Please enter your vehicle details</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                        <div class="error-message">Please select a preferred date</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="8:00 AM">8:00 AM</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                        </select>
+                        <div class="error-message">Please select a preferred time</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Any specific concerns or requests..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="estimated-cost">Estimated Cost</label>
+                    <input type="text" id="estimated-cost" readonly style="background: #f0f0f0; font-weight: 700; color: #ff4500;">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem; margin-top: 1rem; position: relative;">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Confirm Booking</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="copyright">
+            &copy; 2025 YOKOHAMA MINERVA - Premium Automotive Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>
